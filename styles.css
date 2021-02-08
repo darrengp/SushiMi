@@ -1,0 +1,30 @@
+body {
+  color: red;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+#container {
+  background-color: grey;
+  width: 500px;
+  height: 600px;
+  border: coral solid 10px;
+  margin-top: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+
+  overflow: hidden;
+}
+
+#streak {
+  margin-right: auto;
+  margin-bottom: 70%;
+}
+
+#time {
+  margin-left: auto;
+  margin-bottom: 70%;
+}
