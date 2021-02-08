@@ -7,11 +7,11 @@ You will watch the computer show you the pattern and then you must do the same. 
 
 ## How to play
 
+- You will start on the homescreen. The homescreen will give you a pop up with minor instructions and board layout guide.
+
 ![home img](assets/home.jpg)
 
 ![overview img](assets/overviewscreenshot.jpg)
-
-- You will start on the homescreen. The homescreen will give you a pop up with minor instructions and board layout guide.
 
 - **Next**
 
