@@ -80,6 +80,7 @@ The rounds will get progressively harder.
   - player 1 slide push animation
   - player grab animation
   - in game direction pop up animation
+- Timer
 
 ---
 
