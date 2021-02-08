@@ -69,19 +69,24 @@ The rounds will get progressively harder.
 - Player will be able move through the board.
 - Winning/lossing logic
 - Buttons working as they should
-- In-game direction pop up
+
 - 3-5 board levels completed
 
 ### Stretch Goals
 
 - Animation
+
   - computer slide animation
   - player 1 slide push animation
   - player grab animation
+
   - in game direction pop up animation
+
 - Timer
 - Streak scale functional
 - ai random moves
+
+- In-game direction pop up
 
 ---
 
