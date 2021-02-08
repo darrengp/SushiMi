@@ -1,5 +1,7 @@
 const container = document.getElementById("container");
 
+let gameboardArr = [];
+
 createGrid = (number) => {
   for (let i = 0; i < number; i++) {
     const div = document.createElement("div");
@@ -12,8 +14,10 @@ createGrid = (number) => {
     // div.addEventListener("mousedown", cb);
     container.append(div);
     const pixel = document.querySelectorAll(".pixel");
+    gameboardArr.push(div);
     // console.log(container);
   }
 };
 
 createGrid(20);
+console.log(gameboardArr);

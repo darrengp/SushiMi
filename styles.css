@@ -11,7 +11,7 @@ body {
   width: 500px;
   height: 600px;
   border: coral solid 10px;
-  margin-top: 50px;
+  margin-top: 100px;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
@@ -20,11 +20,11 @@ body {
 }
 
 #streak {
-  margin-right: auto;
-  margin-bottom: 70%;
+  margin-right: 10vw;
+  margin-bottom: 80vh;
 }
 
 #time {
-  margin-left: auto;
-  margin-bottom: 70%;
+  margin-left: 10vw;
+  margin-bottom: 80vh;
 }
