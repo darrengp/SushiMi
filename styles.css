@@ -1,9 +1,19 @@
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: red;
   align-items: center;
   text-align: center;
   justify-content: center;
   display: flex;
+  /* background-image: url(./assets/testBG.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #container {
@@ -22,9 +32,20 @@ body {
 #streak {
   margin-right: 10vw;
   margin-bottom: 80vh;
+  display: block;
 }
 
 #time {
   margin-left: 10vw;
   margin-bottom: 80vh;
+  display: block;
+}
+
+.pixel {
+  background-color: white;
+  border: orange solid 0.01px;
+  width: 123px;
+  height: 118px;
+  margin: none;
+  font-size: 100px;
 }
