@@ -4,6 +4,7 @@ let pixel = "";
 let play = true;
 
 let gameboardArr = [];
+let compMoveArr = [];
 
 ///// grid creater
 createGrid = (number) => {
@@ -12,53 +13,43 @@ createGrid = (number) => {
     div.setAttribute("class", "pixel");
     div.setAttribute("id", `pixel${i}`);
     div.addEventListener("click", onTap);
-    container.append(div);
-    // pixel = document.querySelectorAll(".pixel");
+    container.appendChild(div);
     gameboardArr.push(div);
   }
 };
 
 createGrid(20);
 
-//// event listeners
-
-// for (let i = 0; i <= gameboardArr.length; i++) {
-//   if (gameboardArr[i] == undefined) {
-//     console.log(gameboardArr[i]);
-//   } else {
-//     gameboardArr[i].addEventListener("click", onTap);
-//   }
-// }
 console.log(gameboardArr);
 
-console.log("tesstttt");
-
-/// temp computer board levels
+/// test computer board level
 function compPlayB1() {
   gameboardArr[14].innerText = "🍣";
+  compMoveArr.push(gameboardArr[14]);
   setTimeout(function () {
     gameboardArr[10].innerText = "🍣";
     gameboardArr[14].innerText = " ";
+    compMoveArr.push(gameboardArr[10]);
   }, 1000);
   setTimeout(function () {
     gameboardArr[6].innerText = "🍣";
     gameboardArr[10].innerText = " ";
+    compMoveArr.push(gameboardArr[6]);
   }, 1000 * 2);
   setTimeout(function () {
     gameboardArr[2].innerText = "🍣";
     gameboardArr[6].innerText = " ";
+    compMoveArr.push(gameboardArr[2]);
   }, 1000 * 3);
   setTimeout(function () {
-    gameboardArr[2].innerText = "🍣";
-    gameboardArr[6].innerText = " ";
+    gameboardArr[2].innerText = " ";
   }, 1000 * 4);
   setTimeout(function () {
-    gameboardArr[2].innerText = " ";
     alert("players turn! I hope you payed attention");
-  }, 1000 * 4);
+  }, 1000 * 4.3);
 }
 compPlayB1();
-
+console.log(compMoveArr);
 ////////////////////////////////////////////
 
 /// temp onTap // still exploring
@@ -74,21 +65,24 @@ function onTap(event) {
   } else {
     if (a.id == "pixel14") {
       gameboardArr[14].innerText = "🍣";
-      // console.log(a.id);
+      console.log(a.id);
     } else {
       play = false;
     }
-    // // need await
-    // if (a.id == "pixel10") {
-    // } else {
-    //   play = false;
-    // }
-    // // need await
-    // if (a.id == "pixel6") {
-    //   console.log(a.id);
-    // } else {
-    //   play = false;
-    // }
-    // // need await
+    // need .then()?
+    if (a.id == "pixel10") {
+      gameboardArr[10].innerText = "🍣";
+      gameboardArr[14].innerText = " ";
+      console.log(a.id);
+    } else {
+      play = false;
+    }
+    // need .then()?
+    if (a.id == "pixel6") {
+      console.log(a.id);
+    } else {
+      play = false;
+    }
+    // need .then()?
   }
 }
