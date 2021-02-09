@@ -39,23 +39,23 @@ function compPlayB1() {
   setTimeout(function () {
     gameboardArr[10].innerText = "🍣";
     gameboardArr[14].innerText = " ";
-  }, 2000);
+  }, 1000);
   setTimeout(function () {
     gameboardArr[6].innerText = "🍣";
     gameboardArr[10].innerText = " ";
-  }, 2000 * 2);
+  }, 1000 * 2);
   setTimeout(function () {
     gameboardArr[2].innerText = "🍣";
     gameboardArr[6].innerText = " ";
-  }, 2000 * 3);
+  }, 1000 * 3);
   setTimeout(function () {
     gameboardArr[2].innerText = "🍣";
     gameboardArr[6].innerText = " ";
-  }, 2000 * 4);
+  }, 1000 * 4);
   setTimeout(function () {
     gameboardArr[2].innerText = " ";
     alert("players turn! I hope you payed attention");
-  }, 2000 * 4.5);
+  }, 1000 * 4);
 }
 compPlayB1();
 
@@ -72,8 +72,23 @@ function onTap(event) {
     console.log("game over");
     // startState();
   } else {
-    if (a.id == "pixel10") {
-      console.log(a.id);
+    if (a.id == "pixel14") {
+      gameboardArr[14].innerText = "🍣";
+      // console.log(a.id);
+    } else {
+      play = false;
     }
+    // // need await
+    // if (a.id == "pixel10") {
+    // } else {
+    //   play = false;
+    // }
+    // // need await
+    // if (a.id == "pixel6") {
+    //   console.log(a.id);
+    // } else {
+    //   play = false;
+    // }
+    // // need await
   }
 }
