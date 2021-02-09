@@ -54,6 +54,40 @@ console.log(compMoveArr);
 
 /// temp onTap // still exploring
 ///// onTap function --------------------------
+// function onTap(event) {
+//   // console.log(box1.value);
+//   let a = document.getElementById(event.target.id);
+//   // console.log(a.id);
+
+//   if (play == false) {
+//     console.log("game over");
+//     // startState();
+//   } else {
+//     if (a.id == "pixel14") {
+//       gameboardArr[14].innerText = "🍣";
+//       console.log(a.id);
+//     } else {
+//       play = false;
+//     }
+//     // need .then()?
+//     if (a.id == "pixel10") {
+//       gameboardArr[10].innerText = "🍣";
+//       gameboardArr[14].innerText = " ";
+//       console.log(a.id);
+//     } else {
+//       play = false;
+//     }
+//     // need .then()?
+//     if (a.id == "pixel6") {
+//       console.log(a.id);
+//     } else {
+//       play = false;
+//     }
+//     // need .then()?
+//   }
+// }
+
+console.log(compMoveArr[0]);
 function onTap(event) {
   // console.log(box1.value);
   let a = document.getElementById(event.target.id);
@@ -63,26 +97,17 @@ function onTap(event) {
     console.log("game over");
     // startState();
   } else {
-    if (a.id == "pixel14") {
-      gameboardArr[14].innerText = "🍣";
+    if (a.id == compMoveArr[0].id) {
+      compMoveArr.shift();
+      a.innerText = "🍣";
       console.log(a.id);
+      setTimeout(function () {
+        a.innerText = "";
+        console.log(compMoveArr);
+      }, 1000 * 3);
     } else {
-      play = false;
+      alert("wrong");
     }
-    // need .then()?
-    if (a.id == "pixel10") {
-      gameboardArr[10].innerText = "🍣";
-      gameboardArr[14].innerText = " ";
-      console.log(a.id);
-    } else {
-      play = false;
-    }
-    // need .then()?
-    if (a.id == "pixel6") {
-      console.log(a.id);
-    } else {
-      play = false;
-    }
-    // need .then()?
   }
 }
+console.log(compMoveArr[0].id);
