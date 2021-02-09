@@ -5,8 +5,8 @@ let play = true;
 
 let gameboardArr = [];
 let compMoveArr = [];
-
-///// grid creater
+let gridNumber = 20;
+///// grid/gameboard creater
 createGrid = (number) => {
   for (let i = 0; i < number; i++) {
     const div = document.createElement("div");
@@ -18,12 +18,13 @@ createGrid = (number) => {
   }
 };
 
-createGrid(20);
+createGrid(gridNumber);
 
 // checkForWin //////////////////////////////
 function checkForWin() {
   if (compMoveArr.length == 0) {
     alert("winner");
+    play = false;
   }
 }
 
@@ -59,44 +60,10 @@ compPlayB1();
 console.log(compMoveArr);
 ////////////////////////////////////////////
 
-/// temp onTap // still exploring
-///// onTap function --------------------------
-// function onTap(event) {
-//   // console.log(box1.value);
-//   let a = document.getElementById(event.target.id);
-//   // console.log(a.id);
-
-//   if (play == false) {
-//     console.log("game over");
-//     // startState();
-//   } else {
-//     if (a.id == "pixel14") {
-//       gameboardArr[14].innerText = "🍣";
-//       console.log(a.id);
-//     } else {
-//       play = false;
-//     }
-//     // need .then()?
-//     if (a.id == "pixel10") {
-//       gameboardArr[10].innerText = "🍣";
-//       gameboardArr[14].innerText = " ";
-//       console.log(a.id);
-//     } else {
-//       play = false;
-//     }
-//     // need .then()?
-//     if (a.id == "pixel6") {
-//       console.log(a.id);
-//     } else {
-//       play = false;
-//     }
-//     // need .then()?
-//   }
-// }
-
 console.log(compMoveArr[0]);
+
+// onTap function //////////////////////////////////////////
 function onTap(event) {
-  // console.log(box1.value);
   let a = document.getElementById(event.target.id);
   // console.log(a.id);
 
@@ -110,7 +77,7 @@ function onTap(event) {
       console.log(a.id);
       setTimeout(function () {
         a.innerText = "";
-        console.log(compMoveArr);
+        // console.log(compMoveArr);
         checkForWin();
       }, 250);
     } else {
