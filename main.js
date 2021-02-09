@@ -20,6 +20,13 @@ createGrid = (number) => {
 
 createGrid(20);
 
+// checkForWin //////////////////////////////
+function checkForWin() {
+  if (compMoveArr.length == 0) {
+    alert("winner");
+  }
+}
+
 console.log(gameboardArr);
 
 /// test computer board level
@@ -104,9 +111,10 @@ function onTap(event) {
       setTimeout(function () {
         a.innerText = "";
         console.log(compMoveArr);
-      }, 1000 * 3);
+        checkForWin();
+      }, 250);
     } else {
-      alert("wrong");
+      alert("Wrong!!!!! Try again!!!!!");
     }
   }
 }
