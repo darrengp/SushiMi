@@ -10,19 +10,24 @@ body {
   text-align: center;
   justify-content: center;
   display: flex;
-  /* background-image: url(./assets/testBG.png); */
+  background-image: url(./assets/testBG.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vh;
   height: 100vh;
 }
-
+#sushimi {
+  display: inline-block;
+  position: absolute;
+  margin-bottom: 90vh;
+}
 #container {
   background-color: grey;
-  width: 500px;
+  max-width: 500px;
+  min-width: 500px;
   height: 600px;
   border: coral solid 10px;
-  margin-top: 100px;
+  margin-top: 400px;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
@@ -32,14 +37,14 @@ body {
 
 #streak {
   margin-right: 10vw;
-  margin-bottom: 80vh;
+  margin-bottom: 90vh;
   display: block;
   z-index: 2;
 }
 
 #time {
   margin-left: 10vw;
-  margin-bottom: 80vh;
+  margin-bottom: 90vh;
   display: block;
   z-index: 2;
 }
