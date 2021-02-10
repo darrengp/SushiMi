@@ -12,7 +12,7 @@ body {
   justify-content: center;
   display: flex;
   background-color: #fc9219;
-  background-image: url(./assets/sushimiBG7.png);
+  background-image: url(./assets/sushimiBG8.png);
 
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -34,7 +34,7 @@ body {
   border: rgb(109, 12, 12) solid 20px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   margin-top: 100px;
-  margin-right: 13vh;
+  margin-right: 25vh;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
@@ -57,7 +57,7 @@ body {
 }
 
 #time {
-  margin-left: -3vw;
+  margin-left: -10vw;
   margin-bottom: -20vh;
 
   display: block;
@@ -161,4 +161,36 @@ body {
   margin-right: -1000px;
   font-size: 25px;
   font-weight: bold;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
+}
+
+#lives1 {
+  font-size: 50px;
+  position: absolute;
+  margin-top: -650px;
+  margin-left: 150px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#lives2 {
+  font-size: 50px;
+  position: absolute;
+  margin-top: -650px;
+  text-shadow: 2px 2px 4px #000000;
+}
+#lives3 {
+  font-size: 50px;
+  position: absolute;
+  margin-top: -650px;
+  margin-right: 150px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#lives4 {
+  font-size: 50px;
+  position: absolute;
+  margin-top: -800px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
 }
