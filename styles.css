@@ -83,6 +83,10 @@ body {
     0 10px 10px 0 rgba(0, 0, 0, 0.379);
 }
 
+.pixel:hover {
+  background-color: yellow;
+}
+
 #numbers {
   margin-top: 5px;
   font-size: 40px;
@@ -115,6 +119,10 @@ body {
   font-size: 50px;
   background-color: white;
 }
+
+#start:hover {
+  background-color: yellow;
+}
 #reset {
   width: 25vw;
   height: 80px;
@@ -125,6 +133,10 @@ body {
   background-color: lightcoral;
   border: rgb(255, 255, 255) solid 5px;
 }
+#reset:hover {
+  background-color: yellow;
+}
+
 #replay {
   width: 25vw;
   height: 80px;
@@ -135,6 +147,9 @@ body {
   font-size: 50px;
   /* margin-right: 200px; */
   background-color: aquamarine;
+}
+#replay:hover {
+  background-color: yellow;
 }
 #next {
   width: 25vw;
@@ -149,6 +164,10 @@ body {
   color: white;
 }
 
+#next:hover {
+  background-color: yellow;
+  color: red;
+}
 #info {
   position: absolute;
   width: 50px;
@@ -162,6 +181,9 @@ body {
   font-size: 25px;
   font-weight: bold;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
+}
+#info:hover {
+  background-color: yellow;
 }
 
 #lives1 {
