@@ -10,10 +10,14 @@ body {
   text-align: center;
   justify-content: center;
   display: flex;
-  background-image: url(./assets/testBG.png);
-  background-position: center;
+  background-color: #fc9219;
+  background-image: url(./assets/sushimiBG2.png);
+
   background-repeat: no-repeat;
-  background-size: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+
   height: 100vh;
 }
 #sushimi {
@@ -22,39 +26,42 @@ body {
   margin-bottom: 90vh;
 }
 #container {
-  background-color: grey;
-  max-width: 500px;
-  min-width: 500px;
-  height: 600px;
-  border: coral solid 10px;
-  margin-top: 400px;
+  /* background-color: grey; */
+  max-width: 405px;
+  min-width: 405px;
+  height: 470px;
+  border: black solid 10px;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
+  margin-top: 160px;
+  margin-right: 6vh;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
-  border-radius: 2em;
+  border-radius: 2.5em;
   overflow: hidden;
 }
 
 #streak {
-  margin-right: 10vw;
-  margin-bottom: 90vh;
+  /* margin-right: 10vw; */
+  margin-bottom: 70vh;
   display: block;
-  z-index: 2;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #time {
-  margin-left: 10vw;
-  margin-bottom: 90vh;
+  /* margin-left: 10vw; */
+  margin-bottom: 70vh;
   display: block;
-  z-index: 2;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .pixel {
-  background-color: white;
-  border: orange solid 0.01px;
-  width: 120px;
-  height: 118px;
+  background-color: rgb(94, 78, 72);
+  border: rgb(43, 25, 11) solid 0.01px;
+  width: 77px;
+  height: 75px;
   margin: none;
-  font-size: 100px;
-  transition: 0.5s;
+  text-align: center;
+  font-size: 55px;
+  /* transition: 0.5s; */
 }

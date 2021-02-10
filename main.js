@@ -2,10 +2,11 @@
 const container = document.getElementById("container");
 let pixel = "";
 let play = true;
+let streakNum = document.getElementById("strnum");
 
 let gameboardArr = [];
 let compMoveArr = [];
-let gridNumber = 20;
+let gridNumber = 30;
 ///// grid/gameboard creater
 createGrid = (number) => {
   for (let i = 0; i < number; i++) {
@@ -24,6 +25,7 @@ createGrid(gridNumber);
 function checkForWin() {
   if (compMoveArr.length == 0) {
     alert("winner");
+    streakNum.innerText = "+1";
     play = false;
   }
 }
@@ -32,29 +34,34 @@ console.log(gameboardArr);
 
 /// test computer board level
 function compPlayB1() {
-  gameboardArr[14].innerText = "🍣";
-  compMoveArr.push(gameboardArr[14]);
+  gameboardArr[18].innerText = "🍣";
+  compMoveArr.push(gameboardArr[18]);
   setTimeout(function () {
-    gameboardArr[10].innerText = "🍣";
-    gameboardArr[14].innerText = " ";
-    compMoveArr.push(gameboardArr[10]);
+    gameboardArr[13].innerText = "🍣";
+    gameboardArr[18].innerText = " ";
+    compMoveArr.push(gameboardArr[13]);
   }, 1000);
   setTimeout(function () {
-    gameboardArr[6].innerText = "🍣";
-    gameboardArr[10].innerText = " ";
-    compMoveArr.push(gameboardArr[6]);
+    gameboardArr[8].innerText = "🍣";
+    gameboardArr[13].innerText = " ";
+    compMoveArr.push(gameboardArr[8]);
   }, 1000 * 2);
   setTimeout(function () {
-    gameboardArr[2].innerText = "🍣";
-    gameboardArr[6].innerText = " ";
-    compMoveArr.push(gameboardArr[2]);
+    gameboardArr[3].innerText = "🍣";
+    gameboardArr[8].innerText = " ";
+    compMoveArr.push(gameboardArr[3]);
   }, 1000 * 3);
   setTimeout(function () {
-    gameboardArr[2].innerText = " ";
+    gameboardArr[2].innerText = "🍣";
+    gameboardArr[3].innerText = " ";
+    compMoveArr.push(gameboardArr[2]);
   }, 1000 * 4);
   setTimeout(function () {
+    gameboardArr[2].innerText = " ";
+  }, 1000 * 5);
+  setTimeout(function () {
     alert("players turn! I hope you payed attention");
-  }, 1000 * 4.3);
+  }, 1000 * 5.3);
 }
 compPlayB1();
 console.log(compMoveArr);
