@@ -31,10 +31,10 @@ body {
   max-width: 425px;
   min-width: 425px;
   height: 470px;
-  border: black solid 20px;
+  border: rgb(196, 150, 109) solid 20px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   margin-top: 130px;
-  margin-right: 6vh;
+  margin-right: 13vh;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
@@ -57,7 +57,7 @@ body {
 }
 
 #time {
-  margin-left: 3vw;
+  margin-left: -3vw;
   margin-bottom: -20vh;
 
   display: block;
@@ -72,7 +72,7 @@ body {
 .pixel {
   background-color: rgba(142, 13, 13, 0.899);
   /* background-color: rgba(38, 37, 36, 0.886); */
-  border: rgb(0, 0, 0) solid 0.01px;
+  border: rgb(109, 12, 12) solid 0.01px;
   width: 77px;
   height: 75px;
   margin: none;
@@ -95,48 +95,50 @@ body {
 
 #btndiv {
   position: absolute;
-  margin-bottom: -860px;
+  margin-bottom: -800px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   justify-items: center;
 }
 #start {
-  width: 100px;
-  height: 30px;
+  width: 25vw;
+  height: 80px;
   border: none;
-  border-radius: 1em;
-  margin-right: 200px;
-  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
-  font-size: 15px;
+  /* border-radius: 1em; */
+  /* margin-right: 200px; */
+  /* box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283); */
+  font-size: 50px;
+  background-color: white;
 }
 #reset {
-  width: 100px;
-  height: 30px;
+  width: 25vw;
+  height: 80px;
   border: none;
-  border-radius: 1em;
-  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
-  font-size: 15px;
+  /* border-radius: 1em; */
+  /* box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283); */
+  font-size: 50px;
   background-color: lightcoral;
 }
 #replay {
-  width: 100px;
-  height: 30px;
+  width: 25vw;
+  height: 80px;
   border: none;
-  border-radius: 1em;
-  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
-  font-size: 15px;
-  margin-right: 200px;
+  /* border-radius: 1em; */
+  /* box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283); */
+  font-size: 50px;
+  /* margin-right: 200px; */
   background-color: aquamarine;
 }
 #next {
-  width: 100px;
-  height: 30px;
+  width: 25vw;
+  height: 80px;
   border: none;
-  border-radius: 1em;
-  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
-  font-size: 15px;
-  margin-right: 200px;
+
+  /* border-radius: 1em; */
+  /* box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283); */
+  font-size: 50px;
+  /* margin-right: 200px; */
   background-color: rgb(60, 67, 109);
   color: white;
 }
