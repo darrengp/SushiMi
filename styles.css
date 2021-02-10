@@ -33,12 +33,13 @@ body {
   border: black solid 10px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   margin-top: 160px;
-  margin-right: 3vh;
+  margin-right: 6vh;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
-  border-radius: 2.5em;
+  border-radius: 4em;
   overflow: hidden;
+  background-image: url(./assets/blkwoodBG.jpg);
 }
 
 #streak {
@@ -68,14 +69,16 @@ body {
 }
 
 .pixel {
-  background-color: rgb(94, 78, 72);
-  border: rgb(43, 25, 11) solid 0.01px;
+  background-color: rgba(23, 23, 23, 0.886);
+  /* border: rgb(43, 25, 11) solid 0.01px; */
   width: 77px;
   height: 75px;
   margin: none;
   text-align: center;
   font-size: 55px;
   /* transition: 0.5s; */
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.742),
+    0 10px 10px 0 rgba(0, 0, 0, 0.173);
 }
 
 #numbers {
