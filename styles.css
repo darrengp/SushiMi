@@ -33,7 +33,7 @@ body {
   border: black solid 10px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   margin-top: 160px;
-  margin-right: 6vh;
+  margin-right: 3vh;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
@@ -42,17 +42,29 @@ body {
 }
 
 #streak {
-  /* margin-right: 10vw; */
+  margin-right: 5vw;
   margin-bottom: 70vh;
   display: block;
   text-shadow: 2px 2px 4px #000000;
+  /* border: rgb(43, 25, 11) solid 0.01px; */
+  background-color: rgb(222, 187, 174);
+  border-radius: 2em;
+  padding: 50px 15px;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
+  font-size: 12px;
 }
 
 #time {
-  /* margin-left: 10vw; */
-  margin-bottom: 70vh;
+  margin-left: 3vw;
+  margin-bottom: -20vh;
+
   display: block;
   text-shadow: 2px 2px 4px #000000;
+  background-color: rgb(222, 187, 174);
+  border-radius: 2em;
+  padding: 50px 20px;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
+  font-size: 12px;
 }
 
 .pixel {
@@ -64,4 +76,14 @@ body {
   text-align: center;
   font-size: 55px;
   /* transition: 0.5s; */
+}
+
+#numbers {
+  margin-top: 5px;
+  font-size: 40px;
+}
+
+#strnum {
+  margin-top: 5px;
+  font-size: 40px;
 }
