@@ -31,14 +31,14 @@ body {
   max-width: 425px;
   min-width: 425px;
   height: 470px;
-  border: rgb(196, 150, 109) solid 20px;
+  border: rgb(109, 12, 12) solid 20px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
-  margin-top: 130px;
+  margin-top: 100px;
   margin-right: 13vh;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
-  border-radius: 4em;
+  border-radius: 8em;
   overflow: hidden;
   background-image: url(./assets/blkwoodBG.jpg);
 }
@@ -50,7 +50,7 @@ body {
   text-shadow: 2px 2px 4px #000000;
   /* border: rgb(43, 25, 11) solid 0.01px; */
   background-color: rgb(34, 34, 34);
-  border-radius: 2em;
+  /* border-radius: 2em; */
   padding: 50px 15px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   font-size: 12px;
@@ -63,21 +63,21 @@ body {
   display: block;
   text-shadow: 2px 2px 4px #000000;
   background-color: rgb(34, 34, 34);
-  border-radius: 20em;
+  /* border-radius: 20em; */
   padding: 50px 20px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   font-size: 12px;
 }
 
 .pixel {
-  background-color: rgba(142, 13, 13, 0.899);
+  background-color: rgba(230, 180, 127, 0.899);
   /* background-color: rgba(38, 37, 36, 0.886); */
-  border: rgb(109, 12, 12) solid 0.01px;
+  border: rgb(109, 12, 12) solid 3px;
   width: 77px;
   height: 75px;
   margin: none;
   text-align: center;
-  font-size: 55px;
+  font-size: 65px;
   /* transition: 0.5s; */
   box-shadow: 0 10px 80px 0 rgba(255, 1, 1, 0.742),
     0 10px 10px 0 rgba(0, 0, 0, 0.379);
@@ -86,20 +86,24 @@ body {
 #numbers {
   margin-top: 5px;
   font-size: 40px;
+  border: rgb(255, 255, 255) solid 5px;
 }
 
 #strnum {
   margin-top: 5px;
   font-size: 40px;
+  border: rgb(255, 255, 255) solid 5px;
 }
 
 #btndiv {
   position: absolute;
+
   margin-bottom: -800px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   justify-items: center;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
 }
 #start {
   width: 25vw;
@@ -119,11 +123,13 @@ body {
   /* box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283); */
   font-size: 50px;
   background-color: lightcoral;
+  border: rgb(255, 255, 255) solid 5px;
 }
 #replay {
   width: 25vw;
   height: 80px;
   border: none;
+  border: rgb(255, 255, 255) solid 5px;
   /* border-radius: 1em; */
   /* box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283); */
   font-size: 50px;
@@ -134,11 +140,25 @@ body {
   width: 25vw;
   height: 80px;
   border: none;
-
+  border: rgb(255, 255, 255) solid 5px;
   /* border-radius: 1em; */
   /* box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283); */
   font-size: 50px;
   /* margin-right: 200px; */
   background-color: rgb(60, 67, 109);
   color: white;
+}
+
+#info {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: rgb(255, 255, 255) solid 5px;
+  background-color: royalblue;
+  color: white;
+  border-radius: 50%;
+  margin-top: -850px;
+  margin-right: -1000px;
+  font-size: 25px;
+  font-weight: bold;
 }
