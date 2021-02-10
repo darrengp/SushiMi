@@ -12,7 +12,7 @@ body {
   justify-content: center;
   display: flex;
   background-color: #fc9219;
-  background-image: url(./assets/sushimiBG2.png);
+  background-image: url(./assets/sushimiBG7.png);
 
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -33,7 +33,7 @@ body {
   height: 470px;
   border: black solid 20px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
-  margin-top: 160px;
+  margin-top: 130px;
   margin-right: 6vh;
   flex-direction: row;
   flex-wrap: wrap;
@@ -63,7 +63,7 @@ body {
   display: block;
   text-shadow: 2px 2px 4px #000000;
   background-color: rgb(34, 34, 34);
-  border-radius: 2em;
+  border-radius: 20em;
   padding: 50px 20px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   font-size: 12px;
@@ -95,14 +95,18 @@ body {
 
 #btndiv {
   position: absolute;
-  margin-bottom: -820px;
+  margin-bottom: -860px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
 }
 #start {
   width: 100px;
   height: 30px;
   border: none;
   border-radius: 1em;
-  margin-right: 20vw;
+  margin-right: 200px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   font-size: 15px;
 }
@@ -113,4 +117,26 @@ body {
   border-radius: 1em;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   font-size: 15px;
+  background-color: lightcoral;
+}
+#replay {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
+  font-size: 15px;
+  margin-right: 200px;
+  background-color: aquamarine;
+}
+#next {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
+  font-size: 15px;
+  margin-right: 200px;
+  background-color: rgb(60, 67, 109);
+  color: white;
 }
