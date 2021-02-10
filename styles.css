@@ -88,13 +88,17 @@ body {
 }
 
 #numbers {
-  margin-top: 5px;
+  margin-top: 20px;
   font-size: 40px;
   border: rgb(255, 255, 255) solid 5px;
 }
 
+/* #levelB {
+  border: rgb(255, 255, 255) solid 1px;
+} */
+
 #strnum {
-  margin-top: 5px;
+  margin-top: 20px;
   font-size: 40px;
   border: rgb(255, 255, 255) solid 5px;
 }
@@ -160,7 +164,7 @@ body {
   /* box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283); */
   font-size: 50px;
   /* margin-right: 200px; */
-  background-color: rgb(60, 67, 109);
+  background-color: royalblue;
   color: white;
 }
 
@@ -187,32 +191,40 @@ body {
 }
 
 #lives1 {
-  font-size: 50px;
+  font-size: 30px;
   position: absolute;
-  margin-top: -650px;
-  margin-left: 150px;
+  margin-top: -725px;
+  margin-left: 100px;
   text-shadow: 2px 2px 4px #000000;
 }
 
 #lives2 {
-  font-size: 50px;
+  font-size: 30px;
   position: absolute;
-  margin-top: -650px;
+  margin-top: -730px;
   text-shadow: 2px 2px 4px #000000;
 }
 #lives3 {
-  font-size: 50px;
+  font-size: 30px;
   position: absolute;
-  margin-top: -650px;
-  margin-right: 150px;
+  margin-top: -730px;
+  margin-right: 100px;
   text-shadow: 2px 2px 4px #000000;
 }
 
 #lives4 {
-  font-size: 50px;
+  font-size: 30px;
   position: absolute;
   margin-top: -800px;
   color: white;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
+}
+
+#livesdive {
+  position: absolute;
+  /* display: block; */
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
 }
