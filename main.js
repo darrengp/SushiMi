@@ -21,6 +21,7 @@ let streakNumV = 0;
 let gameboardArr = [];
 let compMoveArr = [];
 let gridNumber = 30;
+
 ///// grid/gameboard creater
 createGrid = (number) => {
   for (let i = 0; i < number; i++) {
@@ -101,9 +102,7 @@ function checkForWin() {
   }
 }
 
-console.log(gameboardArr);
-
-//// COMPUTER LEVELS OBJECT
+// console.log(gameboardArr);
 
 /// test computer board level
 function compPlayB1() {
@@ -146,10 +145,10 @@ function compPlayB1() {
   }, 1000 * 6.3);
 }
 // compPlayB1();
-console.log(compMoveArr);
+// console.log(compMoveArr);
 ////////////////////////////////////////////
 
-console.log(compMoveArr[0]);
+// console.log(compMoveArr[0]);
 
 // onTap function //////////////////////////////////////////
 function onTap(event) {
