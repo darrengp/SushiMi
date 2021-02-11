@@ -31,14 +31,14 @@ body {
   max-width: 425px;
   min-width: 425px;
   height: 470px;
-  border: rgb(109, 12, 12) solid 20px;
+  border: rgba(109, 12, 12, 0.947) solid 20px;
   box-shadow: 0 10px 20px 0 rgb(0, 0, 0), 0 10px 20px 0 rgba(0, 0, 0, 0.283);
   margin-top: 100px;
   margin-right: 25vh;
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
-  border-radius: 8em;
+  border-radius: 7em;
   overflow: hidden;
   background-image: url(./assets/blkwoodBG.jpg);
 }
@@ -58,7 +58,7 @@ body {
 
 #time {
   margin-left: -10vw;
-  margin-bottom: -20vh;
+  margin-bottom: -5vh;
 
   display: block;
   text-shadow: 2px 2px 4px #000000;
@@ -69,15 +69,25 @@ body {
   font-size: 12px;
 }
 
+#levelB:hover {
+  /* background-color: yellow; */
+  color: yellow;
+  /* padding: 0 2px; */
+  cursor: pointer;
+}
+
 .pixel {
   background-color: rgba(230, 180, 127, 0.899);
   /* background-color: rgba(38, 37, 36, 0.886); */
-  border: rgb(109, 12, 12) solid 3px;
+  border: rgba(109, 12, 12, 0.345) solid 3px;
   width: 77px;
-  height: 75px;
+  height: 72px;
   margin: none;
+  display: flex;
   text-align: center;
-  font-size: 65px;
+  justify-content: center;
+  justify-items: center;
+  font-size: 60px;
   /* transition: 0.5s; */
   box-shadow: 0 10px 80px 0 rgba(255, 1, 1, 0.742),
     0 10px 10px 0 rgba(0, 0, 0, 0.379);
@@ -85,6 +95,7 @@ body {
 
 .pixel:hover {
   background-color: yellow;
+  cursor: pointer;
 }
 
 #numbers {
@@ -126,6 +137,7 @@ body {
 
 #start:hover {
   background-color: yellow;
+  cursor: pointer;
 }
 #reset {
   width: 25vw;
@@ -139,6 +151,7 @@ body {
 }
 #reset:hover {
   background-color: yellow;
+  cursor: pointer;
 }
 
 #replay {
@@ -154,6 +167,7 @@ body {
 }
 #replay:hover {
   background-color: yellow;
+  cursor: pointer;
 }
 #next {
   width: 25vw;
@@ -171,6 +185,7 @@ body {
 #next:hover {
   background-color: yellow;
   color: red;
+  cursor: pointer;
 }
 #info {
   position: absolute;
@@ -188,6 +203,8 @@ body {
 }
 #info:hover {
   background-color: yellow;
+  color: red;
+  cursor: pointer;
 }
 
 #lives1 {
