@@ -1,9 +1,22 @@
 //// variables
 const container = document.getElementById("container");
-let pixel = "";
+
 let play = true;
 const streakNum = document.getElementById("strnum");
 const infoBtn = document.getElementById("info");
+const levelBtn = document.getElementById("levelB");
+const startBtn = document.getElementById("start");
+const replayBtn = document.getElementById("replay");
+const nextBtn = document.getElementById("next");
+const resetBtn = document.getElementById("reset");
+let level = document.getElementById("numbers");
+
+let board1 = true;
+let board2 = false;
+let board3 = false;
+let board4 = false;
+let board5 = false;
+let streakNumV = 0;
 
 let gameboardArr = [];
 let compMoveArr = [];
@@ -22,12 +35,60 @@ createGrid = (number) => {
 
 createGrid(gridNumber);
 
+//// Game States ------------------------------
+function startState() {
+  createGrid(gridNumber);
+  compMoveArr = [];
+  play = true;
+  compPlayB1();
+}
+
+function next() {
+  compMoveArr = [];
+  if (board1 == true) {
+    compPlayB1();
+  } else if (board2 == true) {
+    compPlayB2();
+  } else if (board3 == true) {
+    compPlayB3();
+  } else if (board4 == true) {
+    compPlayB4();
+  } else if (board5 == true) {
+    compPlayB5();
+  }
+}
+
+function replay() {}
+function info() {}
+
+function levels() {}
+
+//// Button Event Listeners
+
+startBtn.addEventListener("click", startState);
+resetBtn.addEventListener("click", startState);
+nextBtn.addEventListener("click", next);
+replayBtn.addEventListener("click", replay);
+infoBtn.addEventListener("click", info);
+levelBtn.addEventListener("click", levels);
+
 // checkForWin //////////////////////////////
 function checkForWin() {
   if (compMoveArr.length == 0) {
-    alert("winner");
-    streakNum.innerText = "+1";
-    play = false;
+    alert("winner!!!!!!! press next ");
+    streakNum.innerText = `+ ${(streakNumV += 1)}`;
+    // play = false;
+    // if (board1 == true) {
+    //   compPlayB1();
+    // } else if (board2 == true) {
+    //   compPlayB2();
+    // } else if (board3 == true) {
+    //   compPlayB3();
+    // } else if (board4 == true) {
+    //   compPlayB4();
+    // } else if (board5 == true) {
+    //   compPlayB5();
+    // }
   }
 }
 
@@ -37,6 +98,8 @@ console.log(gameboardArr);
 
 /// test computer board level
 function compPlayB1() {
+  board1 = true;
+  level.innerText = 1;
   gameboardArr[18].innerText = "🍣";
   compMoveArr.push(gameboardArr[18]);
   setTimeout(function () {
@@ -63,7 +126,11 @@ function compPlayB1() {
     gameboardArr[2].innerText = " ";
   }, 1000 * 5);
   setTimeout(function () {
-    alert("players turn! I hope you payed attention");
+    alert(
+      "players turn! I hope you payed attention. Start by tapping the correct starting box"
+    );
+    board1 = false;
+    board2 = true;
   }, 1000 * 5.3);
 }
 compPlayB1();
@@ -77,10 +144,11 @@ function onTap(event) {
   let a = document.getElementById(event.target.id);
   // console.log(a.id);
 
-  if (play == false) {
-    console.log("game over");
-    // startState();
-  } else {
+  // if (play == false) {
+  //   console.log("game over");
+  //   // startState();
+  // } else
+  {
     if (a.id == compMoveArr[0].id) {
       compMoveArr.shift();
       a.innerText = "🍣";
@@ -89,16 +157,20 @@ function onTap(event) {
         a.innerText = "";
         // console.log(compMoveArr);
         checkForWin();
+        // if (checkForWin == true) {
+        //   replay();
+        // }
       }, 250);
     } else {
       alert("Wrong!!!!! Try again!!!!!");
     }
   }
 }
-console.log(compMoveArr[0].id);
+// console.log(compMoveArr[0].id);
 
 // //// Comp move 2 ***********
 function compPlayB2() {
+  level.innerText = 2;
   gameboardArr[12].innerText = "🍣";
   compMoveArr.push(gameboardArr[12]);
   setTimeout(function () {
@@ -125,12 +197,18 @@ function compPlayB2() {
     gameboardArr[2].innerText = " ";
   }, 1000 * 5);
   setTimeout(function () {
-    alert("players turn! I hope you payed attention");
+    board2 = false;
+    board3 = true;
+
+    alert(
+      "players turn! I hope you payed attention. Start by tapping the correct starting box"
+    );
   }, 1000 * 5.3);
 }
 
 // //// Comp move 3 *******
 function compPlayB3() {
+  level.innerText = 3;
   gameboardArr[20].innerText = "🍣";
   compMoveArr.push(gameboardArr[20]);
   setTimeout(function () {
@@ -167,12 +245,17 @@ function compPlayB3() {
     gameboardArr[2].innerText = " ";
   }, 1000 * 7);
   setTimeout(function () {
-    alert("players turn! I hope you payed attention");
+    board3 = false;
+    board4 = true;
+    alert(
+      "players turn! I hope you payed attention. Start by tapping the correct starting box"
+    );
   }, 1000 * 7.3);
 }
 
 // //// Comp move 4 *******
 function compPlayB4() {
+  level.innerText = 4;
   gameboardArr[24].innerText = "🍣";
   compMoveArr.push(gameboardArr[24]);
   setTimeout(function () {
@@ -209,37 +292,42 @@ function compPlayB4() {
     gameboardArr[2].innerText = " ";
   }, 1000 * 7);
   setTimeout(function () {
-    alert("players turn! I hope you payed attention");
+    board4 = false;
+    board5 = true;
+    alert(
+      "players turn! I hope you payed attention. Start by tapping the correct starting box"
+    );
   }, 1000 * 7.3);
 }
 
 // //// Comp move 5 *******
 function compPlayB5() {
-  gameboardArr[24].innerText = "🍣";
-  compMoveArr.push(gameboardArr[24]);
+  level.innerText = 5;
+  gameboardArr[10].innerText = "🍣";
+  compMoveArr.push(gameboardArr[10]);
   setTimeout(function () {
-    gameboardArr[19].innerText = "🍣";
-    gameboardArr[24].innerText = " ";
-    compMoveArr.push(gameboardArr[19]);
+    gameboardArr[15].innerText = "🍣";
+    gameboardArr[10].innerText = " ";
+    compMoveArr.push(gameboardArr[15]);
   }, 1000);
   setTimeout(function () {
-    gameboardArr[18].innerText = "🍣";
-    gameboardArr[19].innerText = " ";
-    compMoveArr.push(gameboardArr[18]);
+    gameboardArr[16].innerText = "🍣";
+    gameboardArr[15].innerText = " ";
+    compMoveArr.push(gameboardArr[16]);
   }, 1000 * 2);
   setTimeout(function () {
-    gameboardArr[13].innerText = "🍣";
-    gameboardArr[18].innerText = " ";
-    compMoveArr.push(gameboardArr[13]);
+    gameboardArr[11].innerText = "🍣";
+    gameboardArr[16].innerText = " ";
+    compMoveArr.push(gameboardArr[11]);
   }, 1000 * 3);
   setTimeout(function () {
-    gameboardArr[8].innerText = "🍣";
-    gameboardArr[13].innerText = " ";
-    compMoveArr.push(gameboardArr[8]);
+    gameboardArr[6].innerText = "🍣";
+    gameboardArr[11].innerText = " ";
+    compMoveArr.push(gameboardArr[6]);
   }, 1000 * 4);
   setTimeout(function () {
     gameboardArr[7].innerText = "🍣";
-    gameboardArr[8].innerText = " ";
+    gameboardArr[6].innerText = " ";
     compMoveArr.push(gameboardArr[7]);
   }, 1000 * 5);
   setTimeout(function () {
@@ -251,6 +339,8 @@ function compPlayB5() {
     gameboardArr[2].innerText = " ";
   }, 1000 * 7);
   setTimeout(function () {
-    alert("players turn! I hope you payed attention");
+    alert(
+      "players turn! I hope you payed attention. Start by tapping the correct starting box"
+    );
   }, 1000 * 7.3);
 }
