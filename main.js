@@ -67,10 +67,15 @@ function info() {}
 
 function levels() {}
 
+function reset() {
+  alert("are you ready? pay attention!!!!!");
+  startState();
+}
+
 //// Button Event Listeners
 
 startBtn.addEventListener("click", startState);
-resetBtn.addEventListener("click", startState);
+resetBtn.addEventListener("click", reset);
 nextBtn.addEventListener("click", next);
 replayBtn.addEventListener("click", replay);
 infoBtn.addEventListener("click", info);
@@ -104,38 +109,41 @@ console.log(gameboardArr);
 function compPlayB1() {
   board1 = true;
   level.innerText = 1;
-  gameboardArr[18].innerText = "🍣";
-  compMoveArr.push(gameboardArr[18]);
+
+  setTimeout(function () {
+    gameboardArr[18].innerText = "🍣";
+    compMoveArr.push(gameboardArr[18]);
+  }, 1000);
   setTimeout(function () {
     gameboardArr[13].innerText = "🍣";
     gameboardArr[18].innerText = " ";
     compMoveArr.push(gameboardArr[13]);
-  }, 1000);
+  }, 1000 * 2);
   setTimeout(function () {
     gameboardArr[8].innerText = "🍣";
     gameboardArr[13].innerText = " ";
     compMoveArr.push(gameboardArr[8]);
-  }, 1000 * 2);
+  }, 1000 * 3);
   setTimeout(function () {
     gameboardArr[3].innerText = "🍣";
     gameboardArr[8].innerText = " ";
     compMoveArr.push(gameboardArr[3]);
-  }, 1000 * 3);
+  }, 1000 * 4);
   setTimeout(function () {
     gameboardArr[2].innerText = "🍣";
     gameboardArr[3].innerText = " ";
     compMoveArr.push(gameboardArr[2]);
-  }, 1000 * 4);
+  }, 1000 * 5);
   setTimeout(function () {
     gameboardArr[2].innerText = " ";
-  }, 1000 * 5);
+  }, 1000 * 6);
   setTimeout(function () {
     alert(
       "players turn! I hope you payed attention. Start by tapping the correct starting box"
     );
     board1 = false;
     board2 = true;
-  }, 1000 * 5.3);
+  }, 1000 * 6.3);
 }
 // compPlayB1();
 console.log(compMoveArr);
