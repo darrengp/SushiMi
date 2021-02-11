@@ -39,6 +39,7 @@ createGrid(gridNumber);
 function startState() {
   createGrid(gridNumber);
   compMoveArr = [];
+  streakNum.innerText = 0;
   play = true;
   compPlayB1();
 }
@@ -58,7 +59,10 @@ function next() {
   }
 }
 
-function replay() {}
+function replay() {
+  compMoveArr = [];
+  // next();
+}
 function info() {}
 
 function levels() {}
@@ -76,7 +80,7 @@ levelBtn.addEventListener("click", levels);
 function checkForWin() {
   if (compMoveArr.length == 0) {
     alert("winner!!!!!!! press next ");
-    streakNum.innerText = `+ ${(streakNumV += 1)}`;
+    streakNum.innerText = `+${(streakNumV += 1)}`;
     // play = false;
     // if (board1 == true) {
     //   compPlayB1();

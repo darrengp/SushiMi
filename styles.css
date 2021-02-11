@@ -71,7 +71,7 @@ body {
 
 #levelB:hover {
   /* background-color: yellow; */
-  color: yellow;
+  /* color: yellow; */
   /* padding: 0 2px; */
   cursor: pointer;
 }
@@ -165,10 +165,10 @@ body {
   /* margin-right: 200px; */
   background-color: aquamarine;
 }
-#replay:hover {
+/* #replay:hover {
   background-color: yellow;
   cursor: pointer;
-}
+} */
 #next {
   width: 25vw;
   height: 80px;
