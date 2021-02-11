@@ -137,7 +137,7 @@ function compPlayB1() {
     board2 = true;
   }, 1000 * 5.3);
 }
-compPlayB1();
+// compPlayB1();
 console.log(compMoveArr);
 ////////////////////////////////////////////
 
