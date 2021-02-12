@@ -1,7 +1,8 @@
-//// variables
-const container = document.getElementById("container");
+////////// Welcome to SushiMi /////////////////////
+// Feb 2021
 
-let play = true;
+//// DOM variables
+const container = document.getElementById("container");
 const streakNum = document.getElementById("strnum");
 const infoBtn = document.getElementById("info");
 const levelBtn = document.getElementById("levelB");
@@ -11,16 +12,19 @@ const nextBtn = document.getElementById("next");
 const resetBtn = document.getElementById("reset");
 let level = document.getElementById("numbers");
 
+///State variables
+let play = true;
 let board1 = true;
 let board2 = false;
 let board3 = false;
 let board4 = false;
 let board5 = false;
 let streakNumV = 0;
-
-let gameboardArr = [];
-let compMoveArr = [];
 let gridNumber = 30;
+
+//Game Play Arrays
+let gameboardArr = []; // stores all of the gameboard pieces/divs while grid is being built.
+let compMoveArr = []; // stores computer moves -- players removes/shift() from array
 
 ///// grid/gameboard creater
 createGrid = (number) => {
@@ -37,6 +41,8 @@ createGrid = (number) => {
 createGrid(gridNumber);
 
 //// Game States ------------------------------
+
+// Start
 function startState() {
   createGrid(gridNumber);
   compMoveArr = [];
@@ -45,6 +51,7 @@ function startState() {
   compPlayB1();
 }
 
+// Next
 function next() {
   compMoveArr = [];
   if (board1 == true) {
@@ -60,6 +67,7 @@ function next() {
   }
 }
 
+// Replay
 function replay() {
   compMoveArr = [];
   // next();
@@ -68,6 +76,7 @@ function info() {}
 
 function levels() {}
 
+// Reset
 function reset() {
   alert("are you ready? pay attention!!!!!");
   startState();
@@ -102,9 +111,37 @@ function checkForWin() {
   }
 }
 
-// console.log(gameboardArr);
+// onTap function //////////////////////////////////////////
 
-/// test computer board level
+function onTap(event) {
+  let a = document.getElementById(event.target.id);
+  // console.log(a.id);
+
+  // if (play == false) {
+  //   console.log("game over");
+  //   // startState();
+  // } else
+  {
+    if (a.id == compMoveArr[0].id) {
+      compMoveArr.shift();
+      a.innerText = "🍣";
+      console.log(a.id);
+      setTimeout(function () {
+        a.innerText = "";
+        // console.log(compMoveArr);
+        checkForWin();
+        // if (checkForWin == true) {
+        //   replay();
+        // }
+      }, 250);
+    } else {
+      alert("Wrong!!!!! Try again!!!!!");
+    }
+  }
+}
+// console.log(compMoveArr[0].id);
+
+/// Board level 1
 function compPlayB1() {
   board1 = true;
   level.innerText = 1;
@@ -150,36 +187,7 @@ function compPlayB1() {
 
 // console.log(compMoveArr[0]);
 
-// onTap function //////////////////////////////////////////
-function onTap(event) {
-  let a = document.getElementById(event.target.id);
-  // console.log(a.id);
-
-  // if (play == false) {
-  //   console.log("game over");
-  //   // startState();
-  // } else
-  {
-    if (a.id == compMoveArr[0].id) {
-      compMoveArr.shift();
-      a.innerText = "🍣";
-      console.log(a.id);
-      setTimeout(function () {
-        a.innerText = "";
-        // console.log(compMoveArr);
-        checkForWin();
-        // if (checkForWin == true) {
-        //   replay();
-        // }
-      }, 250);
-    } else {
-      alert("Wrong!!!!! Try again!!!!!");
-    }
-  }
-}
-// console.log(compMoveArr[0].id);
-
-// //// Comp move 2 ***********
+/// Board level 2
 function compPlayB2() {
   level.innerText = 2;
   gameboardArr[12].innerText = "🍣";
@@ -217,7 +225,7 @@ function compPlayB2() {
   }, 1000 * 5.3);
 }
 
-// //// Comp move 3 *******
+/// Board level 3
 function compPlayB3() {
   level.innerText = 3;
   gameboardArr[20].innerText = "🍣";
@@ -264,7 +272,7 @@ function compPlayB3() {
   }, 1000 * 7.3);
 }
 
-// //// Comp move 4 *******
+/// Board level 4
 function compPlayB4() {
   level.innerText = 4;
   gameboardArr[24].innerText = "🍣";
@@ -311,7 +319,7 @@ function compPlayB4() {
   }, 1000 * 7.3);
 }
 
-// //// Comp move 5 *******
+/// Board level 5
 function compPlayB5() {
   level.innerText = 5;
   gameboardArr[10].innerText = "🍣";
