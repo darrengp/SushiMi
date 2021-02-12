@@ -48,6 +48,9 @@ function startState() {
   compMoveArr = [];
   streakNum.innerText = 0;
   play = true;
+  alert(
+    "PLEASE PAY ATTENTION TO THE WHERE THE SUSHI STARTS AND THEN MOVES TO. YOU MUST FEED HIM IN A PARTICULAR FASHION. THE COMPUTER WILL DEMOSTRATE THE MOVES AND THEN ITS YOUR TURN....."
+  );
   compPlayB1();
 }
 
