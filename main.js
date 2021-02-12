@@ -78,7 +78,7 @@ function levels() {}
 
 // Reset
 function reset() {
-  alert("are you ready? pay attention!!!!!");
+  alert("Are you ready? PLEASE PAY ATTENTION!!!!!");
   startState();
 }
 
@@ -94,7 +94,7 @@ levelBtn.addEventListener("click", levels);
 // checkForWin //////////////////////////////
 function checkForWin() {
   if (compMoveArr.length == 0) {
-    alert("winner!!!!!!! press next ");
+    alert("Good Job!! PRESS NEXT!! ");
     streakNum.innerText = `+${(streakNumV += 1)}`;
     // play = false;
     // if (board1 == true) {
@@ -175,7 +175,7 @@ function compPlayB1() {
   }, 1000 * 6);
   setTimeout(function () {
     alert(
-      "players turn! I hope you paid attention. Start by tapping the correct starting box"
+      "Players turn! I hope you paid attention. Start by tapping the correct starting box. And then......."
     );
     board1 = false;
     board2 = true;
@@ -220,7 +220,7 @@ function compPlayB2() {
     board3 = true;
 
     alert(
-      "players turn! I hope you paid attention. Start by tapping the correct starting box"
+      "Players turn! I hope you paid attention. Start by tapping the correct starting box"
     );
   }, 1000 * 5.3);
 }
@@ -267,7 +267,7 @@ function compPlayB3() {
     board3 = false;
     board4 = true;
     alert(
-      "players turn! I hope you paid attention. Start by tapping the correct starting box"
+      "Players turn! I hope you paid attention. Start by tapping the correct starting box"
     );
   }, 1000 * 7.3);
 }
@@ -314,7 +314,7 @@ function compPlayB4() {
     board4 = false;
     board5 = true;
     alert(
-      "players turn! I hope you paid attention. Start by tapping the correct starting box"
+      "Players turn! I hope you paid attention. Start by tapping the correct starting box"
     );
   }, 1000 * 7.3);
 }
@@ -359,7 +359,7 @@ function compPlayB5() {
   }, 1000 * 7);
   setTimeout(function () {
     alert(
-      "players turn! I hope you paid attention. Start by tapping the correct starting box"
+      "Players turn! I hope you paid attention. Start by tapping the correct starting box"
     );
   }, 1000 * 7.3);
 }
