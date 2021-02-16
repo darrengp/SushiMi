@@ -21,7 +21,7 @@ let board4 = false;
 let board5 = false;
 let streakNumV = 0;
 let gridNumber = 30;
-
+console.log(streakNumV);
 //Game Play Arrays
 let gameboardArr = []; // stores all of the gameboard pieces/divs while grid is being built.
 let compMoveArr = []; // stores computer moves -- players removes/shift() from array
