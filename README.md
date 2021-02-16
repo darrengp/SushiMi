@@ -97,4 +97,10 @@ The rounds will get progressively harder.
 - HTML
 - CSS
 - JS
-  - Canvas
+
+#### Sources
+
+- https://www.youtube.com/watch?v=9zBsdzdE4sM&t=792s
+- https://www.w3.org/
+- https://blog.bitsrc.io/
+- https://www.w3schools.com/
